@@ -1,13 +1,31 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@100&family=Roboto:wght@100&family=Sacramento&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  background-color: black;
+  font-size: 45%;
+  letter-spacing: 0.2rem;
+  color: #ffffff;
+  height: 100vh;
+  font-family: "Segoe UI", Roboto, "Open Sans", "Helvetica Neue";
+}
+
+.container {
+  justify-content: space-between;
+}
+
+#pop {
+  width: 40%;
+  height: 82rem;
+}
+#Super {
+  width: 25rem;
+  margin: 0 0 0.5rem 14rem;
+}
+#green {
+  color: #72db73;
 }

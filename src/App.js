@@ -1,7 +1,15 @@
-import "./App.css";
+import Register from "./Pages/Register.js";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <>
+      <Routes>
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
