@@ -29,3 +29,7 @@ html {
 #green {
   color: #72db73;
 }
+.cross {
+  color: red;
+  font-weight: 500;
+}

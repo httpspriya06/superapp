@@ -1,5 +1,5 @@
 import styles from "./sign.module.css";
-import images from "../images/Super.png";
+// import images from "../images/Super.png";
 import { useState } from "react";
 
 function Sign() {
@@ -66,7 +66,7 @@ function Sign() {
   return (
     <div className={styles.left}>
       <>
-        <img id="Super" src={images} alt="Super" />
+        <img id="Super" src="./assets/Super.png" alt="Super" />
       </>
       <p className={styles.heading}>Create your new account</p>
       <form className={styles.login}>
