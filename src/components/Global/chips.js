@@ -7,7 +7,7 @@ function Chips({ id, categories, setCategories, movies, color }) {
   };
 
   return (
-    <div>
+    
       <button
         style={{
           backgroundColor: "#11B800",
@@ -25,7 +25,7 @@ function Chips({ id, categories, setCategories, movies, color }) {
           X
         </span>
       </button>
-    </div>
+    
   );
 }
 

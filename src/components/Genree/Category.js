@@ -69,17 +69,22 @@ const movies = [
   },
 ];
 
-function ImageCard({ image, id, categories, setcategories }) {
+function ImageCard({ image, id, categories, setCategories }) {
   function handleClick() {
+    const updatedCategories = [...categories];
+    const updatedMovies = [...movies];
+
     if (categories.includes(String(id + 1))) {
       const index = categories.indexOf(String(id + 1));
-      categories.splice(index, 1);
-      setcategories([...categories]);
+      updatedCategories.splice(index, 1);
     } else {
-      setcategories([...categories, image.id]);
+      updatedCategories.push(String(id + 1));
     }
-    movies[id].selected = !movies[id].selected;
+
+    updatedMovies[id].selected = !updatedMovies[id].selected;
+    setCategories(updatedCategories);
   }
+
   return (
     <div
       className={`${styles.card} ${image.selected ? styles.selected : ""}`}
@@ -95,18 +100,23 @@ function ImageCard({ image, id, categories, setcategories }) {
 function Category() {
   const [categories, setCategories] = useState([]);
   const [lengthError, setLengthError] = useState(false);
+
   const navigate = useNavigate();
+
   const handleSignUp = () => {
     if (categories.length < 3) {
       setLengthError(true);
       return;
     } else {
       setLengthError(false);
-      window.localStorage.setItem("genres", JSON.stringify([...categories]));
-      navigate("/browse");
+      // Store the selected genres in local storage
+      const selectedGenres = categories.map(
+        (category) => movies[parseInt(category) - 1].heading
+      );
+      window.localStorage.setItem("genres", JSON.stringify(selectedGenres));
+      navigate("/browwse");
     }
   };
-
   return (
     <>
       <div className={styles.categorypage}>
@@ -140,7 +150,7 @@ function Category() {
                 key={index}
                 image={image}
                 categories={categories}
-                setcategories={setCategories}
+                setCategories={setCategories}
                 id={index}
               />
             ))}

@@ -1,0 +1,62 @@
+#profile {
+  width: 25vh;
+  /* border: 2px solid red; */
+  padding: 6%;
+}
+.purple {
+  background-color: #5746ea;
+  /* border: 2px solid yellow; */
+  width: 40vw;
+  height: 25vw;
+  border-radius: 12px;
+  margin: 5rem auto auto 10rem;
+  display: flex;
+  justify-content: space-between;
+}
+.regdata {
+  font-size: 2.5rem;
+  padding: 5% 20% 8% 2%;
+  /* border: red 2px solid; */
+  height: 20rem;
+  line-height: 30px;
+}
+.Category {
+  background-color: #9f94ff;
+  color: #ffffff;
+  border: #9f94ff 2px solid;
+  border-radius: 20px;
+  padding: 2%;
+  width: 16rem;
+  height: 4rem;
+  margin: 2rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.box {
+  /* border: red 2px solid; */
+  margin-top: 6rem;
+  width: 58vh;
+  height: 20vh;
+  max-height: 16rem;
+  overflow-y: auto;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #9f94ff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9f94ff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: purple;
+}
