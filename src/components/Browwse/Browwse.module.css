@@ -113,3 +113,36 @@
   width: 2.2rem;
   margin: 0 1rem 0 0;
 }
+/* newss styling part */
+#News {
+  width: 40rem;
+  height: 40rem;
+  /* border: 2px solid red; */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.section {
+  margin-top: 6rem;
+  width: 80vh;
+  height: 100vh;
+}
+.title {
+  /* border: red solid 2px; */
+  width: 23vw;
+  font-size: 1.5rem;
+}
+.cont2 {
+  /* border: 2px solid red; */
+  max-height: 75rem;
+  overflow-y: auto;
+}
+.description {
+  font-size: 2rem;
+  /* border: red solid 2px; */
+  width: 23vw;
+  background-color: #ffffff;
+  color: black;
+  padding: 2.5%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
