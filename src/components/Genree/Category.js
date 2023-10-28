@@ -109,7 +109,6 @@ function Category() {
       return;
     } else {
       setLengthError(false);
-      // Store the selected genres in local storage
       const selectedGenres = categories.map(
         (category) => movies[parseInt(category) - 1].heading
       );

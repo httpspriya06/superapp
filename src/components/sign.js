@@ -1,6 +1,6 @@
 import styles from "./sign.module.css";
-// import images from "../images/Super.png";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Sign() {
   const [FormData, SetFormData] = useState({
@@ -16,6 +16,7 @@ function Sign() {
   const [emailError, SetEmailError] = useState(false);
   const [mobileError, SetMobileError] = useState(false);
   const [signupError, SetSignUpError] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     SetFormData({ ...FormData, [e.target.name]: e.target.value });
@@ -60,6 +61,7 @@ function Sign() {
 
     if (valid) {
       window.localStorage.setItem("userData", JSON.stringify(FormData));
+      navigate("/genre");
     }
   };
 
