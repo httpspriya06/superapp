@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STONE-PAPER-SCISSOR</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--  main score board -->
+​
+    <div class="scoreborad " id="cont1">
+      <!-- display area of rock paper scissor text -->
+      <div class="textbox">
+        <h3>ROCK</h3>
+​
+        <h3>PAPER</h3>
+​
+        <h3>SCISSORS</h3>
+      </div>
+      <!--  -->
+      <!-- display area of computer score -->
+      <div id="cscore" class="computerscore">
+        <p>COMPUTER</p>
+        <p>SCORE</p>
+        <h3 id="cmScore"></h3>
+      </div>
+      <!-- display area of user score -->
+      <div id="uscore" class="userscore">
+        <p>YOUR</p>
+        <p>SCORE</p>
+        <h3 id="usScore"></h3>
+      </div>
+    </div>
+    <!--  -->
+    <!-- end of score board -->
+    <!-- play area -->
+    <div class="playArea" id="foot">
+      <!-- lines part -->
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+      <!-- end of lines -->
+      <!-- rock paper scissor images placed -->
+      <!--  -->
+      <div class="rockpaper">
+        <!-- styling part of rock -->
+        <div class="rock">
+          <div class="blue-border">
+            <div class="round">
+              <img id="fist" class="touch" src="icons8-fist-67 1.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!-- styling part of scissor -->
+        <div class="scissor">
+          <div class="purple-border">
+            <div class="round">
+              <img id="scissor" class="touch" src="17911 1.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <!-- styling part of paper -->
+      <div class="paper">
+        <div class="yellow-border">
+          <div class="round">
+            <img id="hand" class="touch" src="icons8-hand-64 1.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <!--  -->
+    </div>
+    <!-- play area -->
+​
+    <!-- footer2 -->
+    <div class = "result-area">
+      <div class="footer2" id="ft2">
+        <div class="left hidden" id="leftd">
+          <h3 id="upick hidden" class="">YOU PICKED</h3>
+          <br>
+          <!--  -->
+          <div class="blue-outer hidden " id="fistwinuser">
+            <div class="round">   
+              <img id="fistwin" class="touch" src="icons8-fist-67 1.png" alt="" />
+            </div>
+          </div>
+        
+          <!--  -->
+          <div class="yellow-outer hidden" id="handwinuser">
+            <div class="round">
+              <img id="handwin" class="touch" src="icons8-hand-64 1.png"
+              alt="" />
+              
+            </div>
+          </div>
+          <div class="purple-outer hidden" id="scissorwinuser">
+            <div class="round">
+              <img id="scissorwin" class="touch" src="17911 1.png" alt="" />
+              
+            </div>
+          </div>
+          <!--  -->
+          <!-- left -->
+        </div>
+        <!--  -->
+      </div>
+      <!-- footer2 -->
+      <div class="answertext hidden" id="winlosetext">
+        <!-- <h1 id="uwin" class="hidden">YOU WIN</h1>
+        <h1 id="ulost" class="hidden">YOU LOST</h1>
+        <h2 id="pc" class="hidden">AGAINST PC</h2>
+        <h2 id="tie" class="hidden">TIE UP</h2> -->
+        <div class="bounce">
+        <h1 id="text1">YOU WIN</h1>
+        <br>
+        <h2 id="text2">AGAINST PC</h2>
+      </div>
+      <div class="play-again hidden" id="playBtn">
+        <button>PLAY AGAIN</button>
+      </div>
+      </div>
+      
+      <!-- right -->
+      <div class="footer3">
+        <div class="right hidden " id="rightd">
+          <h3 id="pcpick hidden" class="">PC PICKED</h3>
+          <br>
+          <div class="blue-outer hidden" id="fistwinpc">
+            <div class="round">
+              <img id="fistwin" class="touch" src="icons8-fist-67 1.png" alt="" />
+             
+            </div>  
+          </div>
+          <div class="yellow-outer hidden" id="handwinpc">
+            <div class="round">
+              <img id="handwin" class="touch" src="icons8-hand-64 1.png"
+              alt="" />
+             
+            </div>
+          </div>
+          <div class="purple-outer hidden" id="scissorwinpc">
+            <div class="round">
+              <img id="handwin" class="touch" src="17911 1.png" alt="" />
+              
+            </div>
+            <!-- right -->
+          </div>
+          <!-- footer3 -->
+        </div>
+    </div>
+    
+      <!--  -->
+      <div class="container2 hidden" id="cont2">
+        <!--  -->
+        <div class="hurray-win">
+          <!-- star  image -->
+          <div class="star">
+            <img src="Group 5.png" alt="">
+          </div>
+          <div class="trophy">
+            <img src="Vector.png" alt="" />
+          </div>
+          <!-- text we win part -->
+          <div class="text-hurray">
+            <h3 id="huray">HURRAY!!</h3>
+            <h3 id="won">YOU WON THE GAME</h3>
+          </div>
+          <!--  -->
+          <div class="play-again hidden" id="playBtnn">
+            <button>PLAY AGAIN</button>
+          </div>
+
+          <!--  -->
+        </div>
+        <!--  -->
+        
+    <!-- cont2 -->
+    </div>
+    <!--  -->
+    <div class="rulesBtn">
+      <button id="showImage">RULES</button>
+    </div>
+    <!-- click on rules image will display -->
+    <div class = "rule-box">
+      <div class="gameRule hidden"  id="ruleBook"  >
+        <div class="gametext">
+          <p id="rules">Game Rules</p>
+          <br />
+          <li>
+            Rock beats scissors, scissors beat paper, and paper beats rock.
+          </li>
+          <br />
+          <li>
+            Agree ahead of time whether you'll count off "rock, paper,
+            scissors, shoot" or "rock, paper, scissors."
+          </li>
+          <br />
+          <li>
+            Use rock, paper, scissors to settle minor decisions or simply
+            play to pass the time.
+          </li>
+          <br />
+          <li>
+            If both players lay down the same hand, each player lays down
+            another hand.
+          </li>
+        </div>
+      </div>
+      <!--  -->
+      <!-- close button -->
+      <div id="closeBtn" style="display: none;">
+        <img id="x" src="x.png" alt="Close" />
+      </div>
+      <!--  -->
+    </div>
+   
+    <div class="nextBtn hidden" id="nextBtn">
+      <button id="nextBtnn">NEXT</button>
+    </div>
+    <!--  -->
+    <script src="script.js"></script>
+  </body>
+</html>

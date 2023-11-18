@@ -5,6 +5,7 @@ function News() {
   const [time, setTime] = useState("");
   const [date, setDate] = useState("");
   const [newsData, setNewsData] = useState([]);
+  const [newsIndex, setNewsIndex] = useState(0); // Index of the currently displayed news article
   const apiKey = "a0caa1d35646419f9c694dc94fad7a1b";
 
   useEffect(() => {
@@ -52,30 +53,42 @@ function News() {
     return () => clearInterval(intervalId);
   }, []);
 
+  const handleNextNews = () => {
+    setNewsIndex((prevIndex) => (prevIndex + 1) % newsData.length);
+  };
+
   return (
     <div className={styles.cont2}>
       <div className={styles.section}>
-        {newsData.map((article, index) => (
-          <div key={index}>
+        {newsData.length > 0 && (
+          <div key={newsIndex} className={styles.newsContainer}>
             <img
               id={styles.News}
-              src={article.urlToImage}
-              alt={article.title}
+              src={newsData[newsIndex].urlToImage}
+              alt={newsData[newsIndex].title}
             />
-            <div className={styles.title}>
-              <h2>{article.title}</h2>
-              <br></br>
-              <p>
-                {date}
-                <span>|</span>
-                <span>{time}</span>
-              </p>
+            <div className={styles.scroll}>
+              <div className={styles.title}>
+                <h2>{newsData[newsIndex].title}</h2>
+                <br></br>
+                <p className={styles.time}>
+                  {date}
+                  <span>|</span>
+                  <span>{time}</span>
+                </p>
+              </div>
+              <div className={styles.descriptionContainer}>
+                {newsData[newsIndex].description}
+              </div>
             </div>
-            <p className={styles.description}>{article.description}</p>
+            <div className={styles.arrow} onClick={handleNextNews}>
+              &rarr;
+            </div>
           </div>
-        ))}
+        )}
       </div>
     </div>
   );
 }
+
 export default News;

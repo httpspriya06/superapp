@@ -1,0 +1,484 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "roboto", sans-serif;
+  letter-spacing: 0.1em;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #89c15e;
+  position: relative;
+  overflow-x: hidden;
+}
+/* DISPLAY AREA OF SCORE BOARD */
+.scoreborad {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 3px solid #ffffff;
+  border-radius: 8px;
+  margin: 3rem auto auto auto;
+  width: 50rem;
+  height: 7rem;
+}
+
+h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.textbox {
+  /* line-height: 1.4; */
+  margin-left: 1rem;
+}
+
+#usScore,
+#cmScore {
+  color: #252525;
+  font-size: 45px;
+  text-align: center;
+}
+
+#cscore {
+  border: 2px solid #ffffff;
+  color: #656565;
+  background-color: #ffffff;
+  border-radius: 8px;
+  font-size: 15px;
+  width: 7rem;
+  height: 6rem;
+  text-align: center;
+  font-weight: 600;
+  margin-left: 22rem;
+  line-height: 1.2;
+}
+#uscore {
+  border: 2px solid #ffffff;
+  color: #656565;
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 7rem;
+  height: 6rem;
+  text-align: center;
+  font-weight: 600;
+  margin-right: 1rem;
+  line-height: 1.2;
+  font-size: 15px;
+}
+
+#cscore:hover {
+  background-color: #ffffffce;
+}
+#uscore:hover {
+  background-color: #ffffffce;
+}
+/* end */
+/* of scoreborad */
+/*  */
+/* START OF PLAY AREA */
+/*  */
+.playArea {
+  position: absolute;
+  top: 2rem;
+}
+
+@media screen and (min-width: 1300px) {
+  .playArea {
+    position: absolute;
+    top: 2rem;
+    left: 10%;
+  }
+}
+
+.line1 {
+  width: 15rem;
+  position: absolute;
+  top: 15rem;
+  left: 31rem;
+  border-bottom: 8px solid rgb(81, 83, 83);
+  transform: rotate(0deg);
+  transform-origin: left;
+  z-index: -1;
+}
+.line2 {
+  width: 14.5rem;
+  position: absolute;
+  top: 15rem;
+  left: 31.5rem;
+  border-bottom: 8px solid rgb(81, 83, 83);
+  transform: rotate(-60deg);
+  transform-origin: right;
+  z-index: -1;
+}
+.line3 {
+  width: 15rem;
+  position: absolute;
+  top: 15rem;
+  left: 31rem;
+  border-bottom: 8px solid rgb(81, 83, 83);
+  transform: rotate(55deg);
+  transform-origin: left;
+  z-index: -1;
+}
+/* rock paper sciisor styling */
+.round {
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+  box-shadow: inset 3px 0px 21px 1px rgba(0, 0, 0, 0.233);
+}
+.round:hover {
+  background-color: #ffffff82;
+  transform: scale(1.2);
+}
+
+.blue-border {
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  background-color: #0074b6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  box-shadow: inset 3px 0px 21px 1px rgba(0, 0, 0, 0.406);
+  position: absolute;
+  left: 28rem;
+  top: 12rem;
+  cursor: pointer;
+}
+.bounce::after {
+  animation: pulse 1000ms cubic-bezier(0.9, 0.7, 0.5, 0.9) infinite;
+}
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.4;
+  }
+}
+
+.bounce::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 10rem;
+  left: 20rem;
+  background: #ffffff58;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.purple-border {
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  background-color: #bd00ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  box-shadow: inset 3px 0px 21px 1px rgba(0, 0, 0, 0.494);
+  position: absolute;
+  left: 42rem;
+  top: 12rem;
+  cursor: pointer;
+}
+.rockpaper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.yellow-border {
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  background-color: #ffa943;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  box-shadow: inset 3px 0px 21px 1px rgba(94, 41, 41, 0.387);
+  cursor: pointer;
+}
+.paper {
+  position: absolute;
+  top: 22rem;
+  left: 35.5rem;
+}
+/* -------------------------------- */
+.hidden {
+  display: none;
+}
+.blue-outer {
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  background-color: #0074b6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+.yellow-outer {
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  background-color: #ffa943;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+.purple-outer {
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  background-color: #bd00ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.round {
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+#upick {
+  font-size: 15px;
+  color: #ffffff;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+#pcpick {
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.result-area {
+  margin-top: 3rem;
+  width: 50%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer2 {
+  margin-top: 2rem;
+  margin-left: 4rem;
+}
+.hidden {
+  display: none;
+}
+
+#text1 {
+  margin-top: 3rem;
+  color: #ffffff;
+  text-align: center;
+  font-size: 3rem;
+}
+#text2 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#playBtn > button {
+  width: 15rem;
+  height: 2rem;
+  margin-top: 3rem;
+  border: 2px solid #ffffff;
+  color: #656565;
+  background-color: #ffffff;
+  border-radius: 8px;
+  font-weight: 550;
+  cursor: pointer;
+}
+#playBtn > button:hover {
+  background-color: #89c15e;
+}
+
+/* ............. */
+
+.hurray-win {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  width: 100%;
+  position: absolute;
+}
+.text-hurray {
+  text-align: center;
+}
+
+.star > img {
+  /* width: 40%; */
+  position: absolute;
+  left: -22rem;
+  width: 30%;
+}
+.trophy > img {
+  position: absolute;
+  top: 10rem;
+  left: -15rem;
+  width: 10%;
+}
+
+#huray {
+  font-size: 3rem;
+  text-align: center;
+  position: absolute;
+  left: -18rem;
+  top: 20rem;
+}
+#won {
+  font-size: 1rem;
+  text-align: center;
+  color: #ffffff;
+  width: 18rem;
+  position: absolute;
+  left: -19rem;
+  top: 24rem;
+  position: relative;
+}
+
+#playBtnn > button {
+  width: 15rem;
+  height: 2rem;
+  border: 2px solid #ffffff;
+  color: #656565;
+  background-color: #ffffff;
+  border-radius: 8px;
+  font-weight: 550;
+  cursor: pointer;
+  position: absolute;
+  top: 25.5rem;
+  left: -17rem;
+}
+#playBtnn > button:hover {
+  background-color: #89c15e;
+}
+
+/* ........... */
+.rulesBtn > button {
+  background-color: #89c15e;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  width: 6rem;
+  height: 3rem;
+  border-radius: 8px;
+  letter-spacing: 0.2em;
+  font-size: 18px;
+  position: fixed;
+  bottom: 1rem;
+  right: 7rem;
+  cursor: pointer;
+}
+.rulesBtn > button:hover {
+  background-color: #ffffff;
+  color: #89c15e;
+  border: 2px solid #ffffff;
+}
+
+.rule-box {
+  position: absolute;
+  bottom: 6rem;
+  right: 6rem;
+}
+
+.gameRule {
+  height: 14rem;
+  width: 12.5rem;
+  background-color: #004429;
+  color: white;
+  border: 6px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+li {
+  list-style: square;
+}
+.gametext {
+  font-size: 10px;
+  text-align: center;
+  font-weight: 500;
+}
+#rules {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 0.4rem;
+}
+#closeBtn {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  z-index: 1;
+  cursor: pointer;
+  background-color: red;
+  border-radius: 50%;
+  width: 35px;
+  height: 30px;
+}
+
+#closeBtn {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#x {
+  margin-left: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.nextBtn > button {
+  background-color: #89c15e;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  width: 5rem;
+  height: 3rem;
+  border-radius: 8px;
+  letter-spacing: 0.2em;
+  font-size: 18px;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.nextBtn > button:hover {
+  background-color: #ffffff;
+  color: #89c15e;
+  border: 2px solid #ffffff;
+}
+
+/* ------------------------------------------------------------------ */

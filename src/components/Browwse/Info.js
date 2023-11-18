@@ -13,7 +13,7 @@ function Info() {
         <p>{info.uname}</p>
         <p>{info.email}</p>
         <p>
-          <strong style={{ fontSize: "5rem" }}>{info.username}</strong>
+          <strong style={{ fontSize: "3rem" }}>{info.username}</strong>
         </p>
         {/* <button>{genre}</button> */}
         <div className={styles.box}>
